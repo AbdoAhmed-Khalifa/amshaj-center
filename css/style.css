@@ -1,0 +1,111 @@
+body {
+  background-color: #eee;
+  height: 50vh;
+}
+section {
+  width: 400px;
+  margin: 120px auto;
+  padding: 30px;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: -100;
+  box-shadow: 2px 0px 19px 10px #ddd;
+}
+@media (max-width: 767px) {
+  section {
+    width: 100%;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+section img {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  margin: 0;
+}
+section .title {
+  padding-top: 3px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 100px;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-radius: 6px;
+  z-index: 2;
+}
+ul li a {
+  text-decoration: none;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: red;
+  height: 100%;
+  transition: 0.5s;
+  width: 0;
+  z-index: -1;
+  border-radius: 6px;
+}
+ul li:hover::before {
+  width: 100%;
+}
+ul li a span,
+ul li a i {
+  transition: 0.5s;
+}
+ul li a span {
+  position: relative;
+  color: black;
+  font-weight: bolder;
+  padding-left: 30px;
+}
+
+ul li:hover a span,
+ul li:hover a i {
+  color: white;
+}
+ul .facebook i {
+  color: #3b5998;
+}
+ul .facebook::before {
+  background-color: #3b5998;
+}
+
+ul .location i {
+  color: #dd4b3e;
+}
+ul .location::before {
+  background-color: #dd4b3e;
+}
+
+ul .Whatspp i {
+  color: #25d366;
+}
+ul .Whatspp::before {
+  background-color: #25d366;
+}
+ul .mobile i {
+  color: black;
+}
+ul .tel i {
+  color: black;
+}
+ul .tel::before,
+ul .mobile::before {
+  background-color: #f26623;
+}
