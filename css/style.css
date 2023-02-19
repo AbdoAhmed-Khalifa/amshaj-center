@@ -4,7 +4,7 @@ body {
 }
 section {
   width: 400px;
-  margin: 120px auto;
+  margin: 120px auto 0;
   padding: 30px;
   background-color: white;
   box-sizing: border-box;
@@ -23,7 +23,7 @@ section {
 section img {
   position: absolute;
   width: 200px;
-  top: 0;
+  top: 30px;
   left: 50%;
   transform: translatex(-50%);
   margin: 0;
@@ -33,7 +33,7 @@ section .title {
   text-align: center;
   font-weight: bold;
   font-size: 17px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 ul {
@@ -93,9 +93,11 @@ ul .location::before {
   background-color: #dd4b3e;
 }
 
-ul .Whatspp i {
+ul .Whatspp i,
+ul .pr-mobile i {
   color: #25d366;
 }
+ul .pr-mobile::before,
 ul .Whatspp::before {
   background-color: #25d366;
 }
@@ -108,4 +110,11 @@ ul .tel i {
 ul .tel::before,
 ul .mobile::before {
   background-color: #f26623;
+}
+footer {
+  padding: 10px;
+  text-align: center;
+}
+footer i {
+  color: red;
 }
